@@ -1,27 +1,53 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+ion-card {
+  width: 100%;
+  max-width: 500px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.input-large {
+  font-size: 1.2em;
 }
 
-#container a {
-  text-decoration: none;
+.currency-selectors {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.arrow {
+  font-size: 1.5em;
+  margin: 0 10px;
+}
+
+.convert-button {
+  margin-top: 20px;
+}
+
+.result-item {
+  margin-top: 20px;
+}
+
+.result-value {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--ion-color-success);
+}
+
+@keyframes hop {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+ion-title {
+  .emoji {
+    display: inline-block;
+    animation: hop 1s ease infinite;
+  }
 }
